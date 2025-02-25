@@ -1,0 +1,24 @@
+{
+  "name": "atividade",
+  "version": "1.0.0",
+  "main": "index",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "node-json-db": "^2.3.1",
+    "uuid": "^11.1.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  }
+}
