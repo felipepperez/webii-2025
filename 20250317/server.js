@@ -9,7 +9,7 @@ const connections = [];
 function showMessage(name, message, color) {
     const coloredName = name[color] || name['rainbow'];
 
-    console.log(`${coloredName} diz: ${message}`);
+   return `${coloredName} diz: ${message}`;
 }
 
 server.on('connection', (ws) => {
@@ -24,8 +24,14 @@ server.on('connection', (ws) => {
             } catch (error) {
                 connections.push({ ws, name: message.toString(), color: 'default' });
             }
+
         } else {
-            showMessage(findedConnection.name, message.toString(), findedConnection.color);
+            const coloredMessage = showMessage(findedConnection.name, message.toString(), findedConnection.color);
+            for(const connection of connections){
+                if(connection.ws !== ws && connection.ws.readyState === WebSocket.OPEN){
+                    ws.send(coloredMessage);
+                }
+            }
         }
     })
 })

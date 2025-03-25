@@ -14,6 +14,10 @@ client.on('open', () => {
     requireMessage();
 });
 
+client.on('message', (message) => {
+    console.log(message.toString());
+});
+
 function requireMessage() {
     rl.question('Digite uma mensagem: ', (message) => {
         client.send(message);
