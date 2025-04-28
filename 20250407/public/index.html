@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio WebSocket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Desafio WebSocket</h1>
+
+    <div id="status">Status: <span class="status disconnected">Desconectado</span></div>
+
+    <form id="infoForm">
+        <input type="text" id="name" placeholder="Seu nome" required/>
+        <input type="text" id="rgm" placeholder="Seu rgm" required/>
+        <button type="submit">Enviar Dados</button>
+    </form>
+
+    <form id="guessForm" style="display: none;">
+        <input type="number" id="guess" placeholder="Digite um número" required/>
+        <button type="submit">Enviar Tentativa</button>
+    </form>
+    
+    <div id="result"></div>
+    <div id="messages"></div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
