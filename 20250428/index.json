@@ -1,0 +1,14 @@
+{
+    "users": {
+        "d129afb2-982b-42ca-943b-96ade0030f37": {
+            "name": "Felipe Perez",
+            "email": "felipe.perez@unigran.br",
+            "password": "1234"
+        },
+        "bcf12c56-1500-49fa-bb11-a5ba62fe45c6": {
+            "name": "Felipe",
+            "email": "felipe@unigran.br",
+            "password": "1234"
+        }
+    }
+}
