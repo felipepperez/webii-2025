@@ -9,11 +9,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "nodemon": "^2.0.22"
-  },
   "dependencies": {
     "body-parser": "^2.2.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "node-json-db": "^2.3.1",
+    "uuid": "^11.1.0"
   }
 }
