@@ -1,0 +1,24 @@
+<h1>Order Registration</h1>
+
+<div style="text-align: right;">
+    <form action="/logout" method="get">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+
+<form method="POST" action="/add">
+    <input type="text" name="number" placeholder="Order Number">
+    <button type="submit">Add Order</button>
+</form>
+
+<form method="POST" action="/ready">
+    <select name="number">
+        <% orders.forEach(o=> { %>
+            <option value="<%= o %>">
+                <%= o %>
+            </option>
+            <% }) %>
+    </select>
+    <button type="submit">Mark as Ready</button>
+</form>
+

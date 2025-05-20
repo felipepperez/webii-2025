@@ -1,0 +1,24 @@
+<h1>Ready Order:</h1>
+<h2 id="order-number"></h2>
+
+<h3>Order History:</h3>
+<ul id="order-history">
+</ul>
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+    integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+    crossorigin="anonymous"></script>
+
+<script>
+    const socket = io();
+    socket.on('order_ready', (number) => {
+        document.getElementById("order-number").innerText = number;
+
+        const now = new Date();
+        const timeString = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+        const li = document.createElement('li');
+        li.innerText = `${number} - ${timeString}`;
+        document.getElementById("order-history").prepend(li);
+    })
+</script>
